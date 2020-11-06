@@ -1,0 +1,71 @@
+.filtersContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 60px;
+}
+
+.filterItems {
+    display: flex;
+    flex-direction: row;
+    height: 34px;
+}
+
+.memberOverview > p {
+    white-space: nowrap;
+    font-weight: 600;
+    margin: 0 10px 0 0;
+}
+
+.group1,
+.group2,
+.group3,
+.group4 {
+    margin-right: 10px;
+}
+
+#select1,
+#select2,
+#select3,
+#select4,
+.yearGroup {
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.yearGroup > button,
+.export {
+    height: 32px;
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .filtersContainer {
+        flex-direction: column;
+        margin: 25px;
+    }
+
+    .filterItems {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    .filtersContainer {
+        flex-direction: column;
+        margin: 25px 10px;
+    }
+
+    .filterItems {
+        height: auto;
+    }
+
+    .yearGroup {
+        width: 100%;
+        margin-bottom: 15px !important;
+    }
+
+    .filterItems {
+        flex-direction: column;
+    }
+}

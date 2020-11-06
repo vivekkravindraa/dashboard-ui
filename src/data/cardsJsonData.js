@@ -1,0 +1,43 @@
+export const cardItems = [
+    {
+        'title': 'Total Transactions',
+        'value': '$327,699,949',
+        'status': 'YOY',
+        'ratings': '17.02'
+    },{
+        'title': 'Base Rebate',
+        'value': '$16,338,493',
+        'status': 'YOY',
+        'ratings': '6.72'
+    },{
+        'title': 'Estimated Growth Rebate',
+        'value': '$4,391,008',
+        'status': 'YOY',
+        'ratings': '276.06'
+    },{
+        'title': 'Estimated Gain Share',
+        'value': '$412,781',
+        'status': 'YOY',
+        'ratings': ''
+    },{
+        'title': 'FBI Rebate',
+        'value': '$840,116',
+        'status': 'YOY',
+        'ratings': '34.57'
+    },{
+        'title': 'Admin Fees',
+        'value': '$0',
+        'status': 'YOY',
+        'ratings': ''
+    },{
+        'title': 'Total Rebate',
+        'value': '$17,178,610',
+        'status': 'YOY',
+        'ratings': '7.81'
+    },{
+        'title': 'Excess Revenue Points',
+        'value': '$0',
+        'status': '',
+        'ratings': ''
+    }
+]
