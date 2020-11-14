@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, 3fr);
     grid-gap: 25px;
-    padding: 60px;
+    padding: 0 60px 25px 60px;
 }
 
 .rebateCard {
@@ -73,7 +73,7 @@
         display: grid;
         grid-template-columns: repeat(3, 4fr);
         grid-gap: 25px;
-        padding: 25px;
+        padding: 0 25px;
     }
 }
 

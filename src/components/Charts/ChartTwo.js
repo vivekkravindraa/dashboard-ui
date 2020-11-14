@@ -57,7 +57,7 @@ export default function ChartTwo() {
     }, []);
 
     return (
-        <figure class="highcharts-figure">
+        <figure className="highcharts-figure">
             <div id="containerChartTwo"></div>
         </figure>
     )

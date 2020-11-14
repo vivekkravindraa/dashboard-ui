@@ -1,0 +1,2 @@
+export const ENABLE_DARK_MODE = 'ENABLE_DARK_MODE';
+export const DISABLE_DARK_MODE = 'DISABLE_DARK_MODE';

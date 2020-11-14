@@ -21,6 +21,10 @@
     cursor: pointer;
 }
 
+.navbar-nav > div {
+    width: fit-content;
+}
+
 .nav-item > a {
     color: #a9a9a9 !important;
     text-decoration: none !important;
@@ -41,6 +45,7 @@
     border-bottom: 1px solid #483D8B;
     padding: 0.2px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .demo-dashboard-btn {

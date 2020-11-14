@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(2, 6fr);
     grid-gap: 25px;
-    margin: 0 60px;
+    padding: 10px 60px 0px 60px;
 }
 
 @media (max-width: 991px) {
@@ -11,7 +11,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0 25px;
+        padding: 0 25px;
     }
 
     .ag-theme-alpine {
@@ -21,6 +21,6 @@
 
 @media (max-width: 767px) {
     .tablesContainer {
-        margin: 0 10px;
+        padding: 0 10px;
     }
 }

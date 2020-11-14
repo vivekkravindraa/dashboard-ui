@@ -1,7 +1,8 @@
 .chartsContainer {
     display: grid;
     grid-template-columns: repeat(2, 6fr);
-    margin: 0 60px;
+    grid-gap: 25px;
+    padding: 0 60px;
 }
 
 .highcharts-credits {
@@ -12,11 +13,11 @@
     min-width: 310px;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
     .chartsContainer {
         display: grid;
         grid-template-columns: repeat(2, 6fr);
-        margin: 0 25px;
+        padding: 25px;
     }
 
     .highcharts-figure, .highcharts-data-table .table {
@@ -30,7 +31,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 60px 10px;
+        padding: 25px 10px;
     }
 
     .highcharts-figure, .highcharts-data-table .table {
@@ -39,6 +40,14 @@
 }
 
 @media (max-width: 319px) {
+    chartsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 10px;
+    }
+
     .highcharts-figure, .highcharts-data-table .table {
         min-width: 210px;
     }

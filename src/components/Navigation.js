@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  // NavLink,
-  // UncontrolledDropdown,
-  // DropdownToggle,
-  // DropdownMenu,
-  // DropdownItem,
   Button
 } from 'reactstrap';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Toggle from 'react-toggle';
 
 import logo from '../assets/images/logo.png';
 import contactUs from '../assets/images/contactUs.svg';
@@ -23,27 +19,37 @@ import { navigationItems } from '../data/navigationJsonData';
 
 import { history } from '../AppRouter';
 
+import "react-toggle/style.css";
 import '../assets/styles/Navigation.css';
 
 const Navigation = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch()
+  const colorMode = useSelector(state => state.colorMode);
 
+  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
+  const handleMode = () => {
+    if(!colorMode) {
+      dispatch({ type: 'ENABLE_DARK_MODE', payload: true })
+    } else {
+      dispatch({ type: 'DISABLE_DARK_MODE', payload: false })
+    }
+  }
+
   return (
-    <div className="navigationContainer">
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">
-          <img src={logo} alt="noImage" />
-        </NavbarBrand>
+    <div className="navigationContainer" style={{ backgroundColor: !colorMode ? 'white !important' : 'black !important' }}>
+      <Navbar color="light" light expand="md" >
+        <Link to="/" style={{ marginRight: 10 }}>
+          <img src={logo} alt="noImage" height="40" />
+        </Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             {navigationItems.map((navigationItem, index) => {
               return (
-                <div>
+                <div key={index}>
                   <NavItem
-                      key={index}
                       href={navigationItem.link}
                     >
                       <Link to={navigationItem.link} onClick={() => history.push(`${navigationItem.link}`)}>
@@ -54,27 +60,18 @@ const Navigation = (props) => {
                 </div>
               )
             })}
-            {/* <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown> */}
           </Nav>
           <Button className="demo-dashboard-btn">Demo Dashboard</Button>
           <img className="contact-us" src={contactUs} alt="noImage" />
           <img className="logout" src={logout} alt="noImage" />
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginLeft: 10 }}>
+            <small>Mode</small>
+            <Toggle
+              defaultChecked={colorMode}
+              icons={false}
+              onChange={() => handleMode()}
+            />
+          </div>
         </Collapse>
       </Navbar>
     </div>
