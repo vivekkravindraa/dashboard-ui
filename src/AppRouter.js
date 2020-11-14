@@ -9,8 +9,6 @@ import Verified from './components/Verified';
 import Invoices from './components/Invoices';
 import PurchaseOrders from './components/PurchaseOrders';
 import ConversionOpportunity from './components/ConversionOpportunity';
-import FBIRebate from './components/FBIRebate';
-import Compliance from './components/Compliance';
 
 export const history = createBrowserHistory();
 
@@ -38,12 +36,6 @@ class AppRouter extends Component {
               </Route>
               <Route path="/conversion-opportunity">
                 <ConversionOpportunity />
-              </Route>
-              <Route path="/fbi-rebate">
-                <FBIRebate />
-              </Route>
-              <Route path="/compliance">
-                <Compliance />
               </Route>
             </Switch>
           </div>

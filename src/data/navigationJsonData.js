@@ -19,9 +19,5 @@ export const navigationItems = [
         'id': 5,
         'title': 'Conversion Opportunity',
         'link': '/conversion-opportunity',
-    },{
-        'id': 6,
-        'title': 'FBI Rebate',
-        'link': '/fbi-rebate'
     }
 ]
