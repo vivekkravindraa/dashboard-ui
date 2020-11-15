@@ -25,22 +25,23 @@ import '../assets/styles/Navigation.css';
 const Navigation = (props) => {
   const dispatch = useDispatch()
   const colorMode = useSelector(state => state.colorMode);
+  const selectedNavTabIndex = useSelector(state => state.selectedNavTabIndex);
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   const handleMode = () => {
     if(!colorMode) {
-      dispatch({ type: 'ENABLE_DARK_MODE', payload: true })
+      dispatch({ type: 'TOGGLE_DARK_MODE', payload: true })
     } else {
-      dispatch({ type: 'DISABLE_DARK_MODE', payload: false })
+      dispatch({ type: 'TOGGLE_DARK_MODE', payload: false })
     }
   }
 
   return (
     <div className="navigationContainer" style={{ backgroundColor: !colorMode ? 'white !important' : 'black !important' }}>
       <Navbar color="light" light expand="md" >
-        <Link to="/" style={{ marginRight: 10 }}>
+        <Link to="/" style={{ marginRight: 10 }} onClick={() => dispatch({ type: 'UPDATE_SELECTED_NAV_TAB_INDEX', payload: 0 })}>
           <img src={logo} alt="noImage" height="40" />
         </Link>
         <NavbarToggler onClick={toggle} />
@@ -52,11 +53,15 @@ const Navigation = (props) => {
                   <NavItem
                       href={navigationItem.link}
                     >
-                      <Link to={navigationItem.link} onClick={() => history.push(`${navigationItem.link}`)}>
+                      <Link to={navigationItem.link} onClick={() => {
+                          history.push(`${navigationItem.link}`)
+                          dispatch({ type: 'UPDATE_SELECTED_NAV_TAB_INDEX', payload: navigationItem.id })
+                        }
+                      }>
                         {navigationItem.title}
                       </Link>
                   </NavItem>
-                  <div className="nav-item-bottom"></div>
+                  <div className={`nav-item-bottom ${navigationItem.id === selectedNavTabIndex ? 'selectedNavTab' : ''}`}></div>
                 </div>
               )
             })}

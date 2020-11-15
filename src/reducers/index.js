@@ -1,18 +1,17 @@
 import {
-    ENABLE_DARK_MODE,
-    DISABLE_DARK_MODE
+    TOGGLE_DARK_MODE, UPDATE_SELECTED_NAV_TAB_INDEX
 } from '../actions/types';
 
 const initialState = {
     loading: false,
-    cartItems : [],
     colorMode: false,
+    selectedNavTabIndex: 0,
     error: ""
 }
 
 export default function rootReducer(state = initialState, action) {
     switch(action.type) {
-        case ENABLE_DARK_MODE:
+        case TOGGLE_DARK_MODE:
             return {
                 ...state,
                 loading: false,
@@ -20,11 +19,11 @@ export default function rootReducer(state = initialState, action) {
                 error: ""
             }
 
-        case DISABLE_DARK_MODE:
+        case UPDATE_SELECTED_NAV_TAB_INDEX:
             return {
                 ...state,
                 loading: false,
-                colorMode: action.payload,
+                selectedNavTabIndex: action.payload,
                 error: ""
             }
 
