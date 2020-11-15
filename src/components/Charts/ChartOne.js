@@ -1,64 +1,18 @@
-import React, { useEffect } from 'react';
-var Highcharts = require('highcharts');  
-// Load module after Highcharts is loaded
-require('highcharts/modules/exporting')(Highcharts);
+import React from 'react';
+import C3Chart from 'react-c3js';
+import 'c3/c3.css';
+ 
+const data = {
+  columns: [
+    ['Data1', 30, 200, 100, 400, 150, 250],
+    ['Data2', 50, 20, 10, 40, 15, 25, 50]
+  ]
+};
 
 export default function ChartOne() {
-  useEffect(() => {
-    Highcharts.chart('containerChartOne', {
-        chart: {
-          type: 'pie',
-          options3d: {
-            enabled: true,
-            alpha: 45,
-            beta: 0
-          }
-        },
-        title: {
-          text: 'Browser market shares at a specific website, 2010'
-        },
-        accessibility: {
-          point: {
-            valueSuffix: '%'
-          }
-        },
-        tooltip: {
-          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-          pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            depth: 35,
-            dataLabels: {
-              enabled: true,
-              format: '{point.name}'
-            }
-          }
-        },
-        series: [{
-          type: 'pie',
-          name: 'Browser share',
-          data: [
-            ['Firefox', 45.0],
-            ['IE', 26.8],
-            {
-              name: 'Chrome',
-              y: 12.8,
-              sliced: true,
-              selected: true
-            },
-            ['Safari', 8.5],
-            ['Opera', 6.2],
-            ['Others', 0.7]
-          ]
-        }]
-      });
-    }, []);
-
     return (
-        <figure className="highcharts-figure">
-            <div id="containerChartOne"></div>
-        </figure>
+        <div>
+            <C3Chart data={data} />
+        </div>
     )
 }

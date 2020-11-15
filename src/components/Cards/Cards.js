@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  Card, CardText, CardBody,
-  CardTitle, CardSubtitle
-} from 'reactstrap';
+import { Card } from 'react-bootstrap';
 
 import { switchIndicator } from '../../utils/switchIndicator';
 import { cardItems } from '../../data/cardsJsonData';
@@ -15,17 +12,17 @@ const Cards = (props) => {
             {cardItems.map((card, index) => {
                 return (
                     <Card className="rebateCard" key={index}>
-                        <CardBody>
-                            <CardTitle className="cardTitle">{card.title}</CardTitle>
-                            <CardSubtitle className="cardSubtitle">{card.value}</CardSubtitle>
+                        <Card.Body>
+                            <Card.Text className="cardTitle">{card.title}</Card.Text>
+                            <Card.Text className="cardSubtitle">{card.value}</Card.Text>
                             <div className="cardBottom">
-                                <CardText>{card.status}</CardText>
+                                <Card.Text>{card.status}</Card.Text>
                                 <div className="cardRatings">
-                                    <CardText>{card.ratings}</CardText>
+                                    <Card.Text>{card.ratings}</Card.Text>
                                     {!card.ratings ? <p style={{ fontSize: 12, margin: 0 }}>NA</p> : <img src={switchIndicator(card.title)} alt="noImage" />}
                                 </div>
                             </div>
-                        </CardBody>
+                        </Card.Body>
                     </Card>
                 )
             })}
