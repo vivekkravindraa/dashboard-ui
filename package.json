@@ -3,13 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@ag-grid-community/react": "^24.1.1",
-    "@ag-grid-enterprise/all-modules": "^24.1.0",
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "ag-grid-community": "^24.1.0",
-    "ag-grid-react": "^24.1.1",
     "bootstrap": "^4.5.3",
     "highcharts": "^8.2.2",
     "node-sass": "^4.14.1",
