@@ -7,7 +7,7 @@ import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
 import { tableData } from '../../data/tableJsonData';
 
-import '../../assets/styles/Table.css';
+import '../../assets/styles/Table.scss';
 
 const Table = () => {
   const [ rowData, setRowData ] = useState(null);

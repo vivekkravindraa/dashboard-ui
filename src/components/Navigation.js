@@ -20,7 +20,7 @@ import { navigationItems } from '../data/navigationJsonData';
 import { history } from '../AppRouter';
 
 import "react-toggle/style.css";
-import '../assets/styles/Navigation.css';
+import '../assets/styles/Navigation.scss';
 
 const Navigation = (props) => {
   const dispatch = useDispatch()
@@ -40,7 +40,7 @@ const Navigation = (props) => {
 
   return (
     <div className="navigationContainer" style={{ backgroundColor: !colorMode ? 'white !important' : 'black !important' }}>
-      <Navbar color="light" light expand="md" >
+      <Navbar expand="md" style={{ backgroundColor: !colorMode ? '#FFFFFF' : '#242424' }}>
         <Link to="/" style={{ marginRight: 10 }} onClick={() => dispatch({ type: 'UPDATE_SELECTED_NAV_TAB_INDEX', payload: 0 })}>
           <img src={logo} alt="noImage" height="40" />
         </Link>
@@ -53,7 +53,8 @@ const Navigation = (props) => {
                   <NavItem
                       href={navigationItem.link}
                     >
-                      <Link to={navigationItem.link} onClick={() => {
+                      <Link to={navigationItem.link}
+                        onClick={() => {
                           history.push(`${navigationItem.link}`)
                           dispatch({ type: 'UPDATE_SELECTED_NAV_TAB_INDEX', payload: navigationItem.id })
                         }
@@ -69,8 +70,7 @@ const Navigation = (props) => {
           <Button className="demo-dashboard-btn">Demo Dashboard</Button>
           <img className="contact-us" src={contactUs} alt="noImage" />
           <img className="logout" src={logout} alt="noImage" />
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginLeft: 10 }}>
-            <small>Mode</small>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: 10 }}>
             <Toggle
               defaultChecked={colorMode}
               icons={false}

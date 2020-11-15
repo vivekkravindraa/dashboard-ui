@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, ButtonGroup, FormGroup, Input } from 'reactstrap';
 
-import '../../assets/styles/Filters.css';
+import '../../assets/styles/Filters.scss';
 
 export default function Filters() {
     return (

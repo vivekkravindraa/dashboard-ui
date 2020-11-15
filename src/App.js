@@ -10,7 +10,7 @@ function App() {
   const colorMode = useSelector(state => state.colorMode);
 
   return (
-    <div style={{ backgroundColor: !colorMode ? '#FFFFFF' : '#242424' }}>
+    <div style={{ paddingTop: 60, backgroundColor: !colorMode ? '#FFFFFF' : '#242424' }}>
       <Filters />
       <Cards />
       <Charts />

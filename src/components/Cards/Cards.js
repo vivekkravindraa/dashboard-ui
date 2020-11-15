@@ -9,7 +9,7 @@ import arrowDownRed from '../../assets/images/arrowDownRed.svg';
 
 import { cardItems } from '../../data/cardsJsonData';
 
-import '../../assets/styles/Cards.css';
+import '../../assets/styles/Cards.scss';
 
 const Cards = (props) => {
     const switchIndicator = (title) => {
