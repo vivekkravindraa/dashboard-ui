@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 
 export default function MemberOverview() {
-    const colorMode = useSelector(state => state.colorMode);
+    const colorMode = useSelector(state => state.toggle.colorMode);
 
     return (
         <div style={{

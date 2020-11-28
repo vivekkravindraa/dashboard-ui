@@ -1,32 +1,11 @@
-import {
-    TOGGLE_DARK_MODE, UPDATE_SELECTED_NAV_TAB_INDEX
-} from '../actions/types';
+import { combineReducers } from 'redux';
 
-const initialState = {
-    loading: false,
-    colorMode: false,
-    selectedNavTabIndex: 0,
-    error: ""
-}
+import reducerToggle from './reducerToggle';
+import reducerNavigate from './reducerNavigate';
 
-export default function rootReducer(state = initialState, action) {
-    switch(action.type) {
-        case TOGGLE_DARK_MODE:
-            return {
-                ...state,
-                loading: false,
-                colorMode: action.payload,
-                error: ""
-            }
+const rootReducer = combineReducers({
+    toggle: reducerToggle,
+    navigate: reducerNavigate
+})
 
-        case UPDATE_SELECTED_NAV_TAB_INDEX:
-            return {
-                ...state,
-                loading: false,
-                selectedNavTabIndex: action.payload,
-                error: ""
-            }
-
-        default: return state;
-    }
-}
+export default rootReducer;

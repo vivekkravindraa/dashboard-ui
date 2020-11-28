@@ -21,8 +21,8 @@ import '../assets/styles/Navigation.scss';
 
 const Navigation = (props) => {
   const dispatch = useDispatch()
-  const colorMode = useSelector(state => state.colorMode);
-  const selectedNavTabIndex = useSelector(state => state.selectedNavTabIndex);
+  const colorMode = useSelector(state => state.toggle.colorMode);
+  const selectedNavTabIndex = useSelector(state => state.navigate.selectedNavTabIndex);
 
   const handleMode = () => {
     if(!colorMode) {
