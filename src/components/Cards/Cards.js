@@ -2,11 +2,10 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 
 import { switchIndicator } from '../../utils/switchIndicator';
-import { cardItems } from '../../data/cardsJsonData';
 
 import '../../assets/styles/Cards.scss';
 
-const Cards = (props) => {
+const Cards = ({ cardItems }) => {
     return (
         <div className="cardsContainer">
             {cardItems.map((card, index) => {
