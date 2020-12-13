@@ -51,6 +51,12 @@
     padding: 0.2px;
 }
 
+.nav-right > div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .demo-dashboard-btn {
     white-space: nowrap !important;
     outline: 0 !important;
@@ -86,9 +92,25 @@
         font-size: 10px;
     }
 
+    .nav-right {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .nav-right > div:first-of-type {
+        margin-top: 8px;
+    }
+
     .demo-dashboard-btn {
         white-space: nowrap !important;
         padding: 2px !important;
         font-size: 8px !important;
+        margin-top: 8px !important;
+    }
+
+    .navbar-toggler {
+        background: #FFFFFF !important;
     }
 } 

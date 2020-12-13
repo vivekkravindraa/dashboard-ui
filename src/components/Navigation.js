@@ -70,16 +70,18 @@ const Navigation = (props) => {
               )
             })}
           </Nav>
-          <Nav>
+          <Nav className="nav-right">
             <Button className="demo-dashboard-btn">Demo Dashboard</Button>
-            <img className="contact-us" src={contactUs} alt="noImage" />
-            <img className="logout" src={logout} alt="noImage" />
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: 10 }}>
-              <Toggle
-                defaultChecked={colorMode}
-                icons={false}
-                onChange={() => handleMode()}
-              />
+            <div>
+              <img className="contact-us" src={contactUs} alt="noImage" />
+              <img className="logout" src={logout} alt="noImage" />
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: 10 }}>
+                <Toggle
+                  defaultChecked={colorMode}
+                  icons={false}
+                  onChange={() => handleMode()}
+                />
+              </div>
             </div>
           </Nav>
         </Navbar.Collapse>

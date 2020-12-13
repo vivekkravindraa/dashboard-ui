@@ -25,23 +25,28 @@ function App() {
     })
   }, []);
 
-  if(!isLoaded) {
-    return <div style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      position: 'relative',
-      top: 100
-    }}><Spinner animation="grow" variant="warning" /></div>
-  } else {
-    return  (
-      <div style={{ paddingTop: 60, backgroundColor: !colorMode ? '#FFFFFF' : '#242424' }}>
-        <Filters />
+  return  (
+    <div style={{ paddingTop: 70, backgroundColor: !colorMode ? '#FFFFFF' : '#242424' }}>
+      <Filters />
+      <div style={{ minHeight: 346 }}>
+        <div style={{
+          display: `${!isLoaded ? 'block' : 'none'}`,
+          margin: '0 auto',
+          position: 'absolute',
+          top: 280,
+          left: '50%',
+          marginLeft: '-15px'
+        }}>
+          <Spinner animation="grow" variant="warning" />
+          <p style={{ display: `${!isLoaded ? 'block' : 'none'}`, color: "orange", marginLeft: '-15px' }}>
+            Loading...
+          </p>
+        </div>
         <Cards cardItems={cardItems} />
-        <Charts />
       </div>
-    );
-  }
+      <Charts />
+    </div>
+  );
 }
 
 export default App;
