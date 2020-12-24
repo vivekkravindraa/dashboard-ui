@@ -22,19 +22,19 @@ class AppRouter extends Component {
               <Route exact path="/">
                 <App />
               </Route>
-              <Route path="/member-overview">
+              <Route path="/tab-1">
                 <MemberOverview />
               </Route>
-              <Route path="/verified">
+              <Route path="/tab-2">
                 <Verified />
               </Route>
-              <Route path="/invoices">
+              <Route path="/tab-3">
                 <Invoices />
               </Route>
-              <Route path="/purchase-orders">
+              <Route path="/tab-4">
                 <PurchaseOrders />
               </Route>
-              <Route path="/conversion-opportunity">
+              <Route path="/tab-5">
                 <ConversionOpportunity />
               </Route>
             </Switch>
