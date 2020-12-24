@@ -1,23 +1,23 @@
 [
     {
         "id": 1,
-        "title": "Member Overview",
-        "link": "/member-overview"
+        "title": "Tab 1",
+        "link": "/tab-1"
     },{
         "id": 2,
-        "title": "Verified",
-        "link": "/verified"
+        "title": "Tab 2",
+        "link": "/tab-2"
     },{
         "id": 3,
-        "title": "Invoices",
-        "link": "/invoices"
+        "title": "Tab 3",
+        "link": "/tab-3"
     },{
         "id": 4,
-        "title": "Purchase Orders",
-        "link": "/purchase-orders"
+        "title": "Tab 4",
+        "link": "/tab-4"
     },{
         "id": 5,
-        "title": "Conversion Opportunity",
-        "link": "/conversion-opportunity"
+        "title": "Tab 5",
+        "link": "/tab-5"
     }
 ]
