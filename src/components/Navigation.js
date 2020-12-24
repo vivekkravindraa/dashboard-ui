@@ -13,7 +13,7 @@ import logo from '../assets/images/logo.png';
 import contactUs from '../assets/images/contactUs.svg';
 import logout from '../assets/images/logout.svg';
 
-import { history } from '../AppRouter';
+import { history } from '..';
 
 import "react-toggle/style.css";
 import '../assets/styles/Navigation.scss';

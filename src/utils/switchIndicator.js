@@ -3,21 +3,21 @@ import arrowDownRed from '../assets/images/arrowDownRed.svg';
 
 export const switchIndicator = (title) => {
     switch(title) {
-        case "Total Transactions":
+        case "Title 1":
             return arrowUpGreen;
-        case "Base Rebate":
+        case "Title 2":
             return arrowDownRed;
-        case "Estimated Growth Rebate":
+        case "Title 3":
             return arrowUpGreen;
-        case "Estimated Gain Share":
+        case "Title 4":
             return arrowDownRed;
-        case "FBI Rebate":
+        case "Title 5":
             return arrowUpGreen;
-        case "Admin Fees":
+        case "Title 6":
             return arrowDownRed;
-        case "Total Rebate":
+        case "Title 7":
             return arrowUpGreen;
-        case "Excess Revenue Points":
+        case "Title 8":
             return arrowDownRed;
         default: return;
     }
