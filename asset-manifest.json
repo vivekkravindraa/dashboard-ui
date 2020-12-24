@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/dashboard-ui/static/css/main.0469e77d.chunk.css",
+    "main.js": "/dashboard-ui/static/js/main.04ac9562.chunk.js",
+    "main.js.map": "/dashboard-ui/static/js/main.04ac9562.chunk.js.map",
+    "runtime-main.js": "/dashboard-ui/static/js/runtime-main.a93253c3.js",
+    "runtime-main.js.map": "/dashboard-ui/static/js/runtime-main.a93253c3.js.map",
+    "static/css/2.8126969c.chunk.css": "/dashboard-ui/static/css/2.8126969c.chunk.css",
+    "static/js/2.b1ae82de.chunk.js": "/dashboard-ui/static/js/2.b1ae82de.chunk.js",
+    "static/js/2.b1ae82de.chunk.js.map": "/dashboard-ui/static/js/2.b1ae82de.chunk.js.map",
+    "index.html": "/dashboard-ui/index.html",
+    "static/css/2.8126969c.chunk.css.map": "/dashboard-ui/static/css/2.8126969c.chunk.css.map",
+    "static/css/main.0469e77d.chunk.css.map": "/dashboard-ui/static/css/main.0469e77d.chunk.css.map",
+    "static/js/2.b1ae82de.chunk.js.LICENSE.txt": "/dashboard-ui/static/js/2.b1ae82de.chunk.js.LICENSE.txt",
+    "static/media/arrowDownRed.564e0669.svg": "/dashboard-ui/static/media/arrowDownRed.564e0669.svg",
+    "static/media/arrowUpGreen.5ae4a16e.svg": "/dashboard-ui/static/media/arrowUpGreen.5ae4a16e.svg",
+    "static/media/contactUs.183e788f.svg": "/dashboard-ui/static/media/contactUs.183e788f.svg",
+    "static/media/logout.ab1a4518.svg": "/dashboard-ui/static/media/logout.ab1a4518.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a93253c3.js",
+    "static/css/2.8126969c.chunk.css",
+    "static/js/2.b1ae82de.chunk.js",
+    "static/css/main.0469e77d.chunk.css",
+    "static/js/main.04ac9562.chunk.js"
+  ]
+}
