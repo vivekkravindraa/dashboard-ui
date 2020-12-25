@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   Navbar,
@@ -6,8 +6,8 @@ import {
   Button
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Axios from 'axios';
 import Toggle from 'react-toggle';
+import navigationItems from '../mocks/navigations.json';
 
 import logo from '../assets/images/logo.png';
 import contactUs from '../assets/images/contactUs.svg';
@@ -22,7 +22,6 @@ const Navigation = (props) => {
   const dispatch = useDispatch()
   const colorMode = useSelector(state => state.toggle.colorMode);
   const selectedNavTabIndex = useSelector(state => state.navigate.selectedNavTabIndex);
-  const [ navigationItems, setNavItems ] = useState([]);
 
   const handleMode = () => {
     if(!colorMode) {
@@ -31,16 +30,6 @@ const Navigation = (props) => {
       dispatch({ type: 'TOGGLE_DARK_MODE', payload: false })
     }
   }
-
-  useEffect(() => {
-    Axios.get(`/data/navigations.json`)
-    .then((res) => {
-      setNavItems(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-  }, []);
 
   return (
     <div className="navigationContainer">

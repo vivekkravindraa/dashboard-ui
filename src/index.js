@@ -54,6 +54,9 @@ ReactDOM.render(
             <Route exact path="/">
               <App />
             </Route>
+            <Route exact path="/dashboard-ui">
+              <App />
+            </Route>
             <Route path="/tab-1">
               <MemberOverview />
             </Route>
