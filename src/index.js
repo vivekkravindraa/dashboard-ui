@@ -51,25 +51,22 @@ ReactDOM.render(
         <div>
           <Navigation />
           <Switch>
-            <Route exact path="/">
-              <App />
-            </Route>
             <Route exact path="/dashboard-ui">
               <App />
             </Route>
-            <Route path="/tab-1">
+            <Route path="/dashboard-ui/tab-1">
               <MemberOverview />
             </Route>
-            <Route path="/tab-2">
+            <Route path="/dashboard-ui/tab-2">
               <Verified />
             </Route>
-            <Route path="/tab-3">
+            <Route path="/dashboard-ui/tab-3">
               <Invoices />
             </Route>
-            <Route path="/tab-4">
+            <Route path="/dashboard-ui/tab-4">
               <PurchaseOrders />
             </Route>
-            <Route path="/tab-5">
+            <Route path="/dashboard-ui/tab-5">
               <ConversionOpportunity />
             </Route>
           </Switch>
