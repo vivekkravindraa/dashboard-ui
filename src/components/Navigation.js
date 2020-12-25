@@ -35,7 +35,7 @@ const Navigation = (props) => {
     <div className="navigationContainer">
       <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: !colorMode ? '#FFFFFF' : '#242424' }}>
         <Navbar.Brand>
-          <Link to="/" style={{ marginRight: 10 }} onClick={() => dispatch({ type: 'UPDATE_SELECTED_NAV_TAB_INDEX', payload: 0 })}>
+          <Link to="/dashboard-ui" style={{ marginRight: 10 }} onClick={() => dispatch({ type: 'UPDATE_SELECTED_NAV_TAB_INDEX', payload: 0 })}>
             <img src={logo} alt="noImage" height="40" />
           </Link>
         </Navbar.Brand>
